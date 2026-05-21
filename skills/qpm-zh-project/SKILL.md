@@ -13,20 +13,21 @@ Configure the current project to use Chinese for all interactions and generated 
 
 ## Target
 
-File: `CLAUDE.md` in the current project root (the working directory).
+File: `.claude/CLAUDE.md` in the current project root (the working directory).
 
 ## Steps
 
-1. Check if `CLAUDE.md` exists in the project root.
-2. Read existing content if present.
-3. Check if a Chinese language section already exists by searching for `<!-- zh-helper:start -->`.
+1. Create `.claude` directory if it does not exist (`mkdir -p .claude`).
+2. Check if `.claude/CLAUDE.md` exists.
+3. Read existing content if present.
+4. Check if a Chinese language section already exists by searching for `<!-- zh-helper:start -->`.
    - If found, replace the block between `<!-- zh-helper:start -->` and `<!-- zh-helper:end -->` with the template.
    - If not found, append the template to the end of the file.
-4. If the file does not exist, create it with the template as its full content.
-5. Read the template from [references/template.md](references/template.md).
-6. Report: "已为当前项目启用中文模式 (CLAUDE.md)".
+5. If the file does not exist, create it with the template as its full content.
+6. Read the template from [references/template.md](references/template.md).
+7. Report: "已为当前项目启用中文模式 (.claude/CLAUDE.md)".
 
 ## Important
 
-- Never remove existing CLAUDE.md content. Only append or update the marked section.
+- Never remove existing .claude/CLAUDE.md content. Only append or update the marked section.
 - Preserve existing line endings and encoding.
