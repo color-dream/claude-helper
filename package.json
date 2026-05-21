@@ -1,0 +1,24 @@
+{
+  "name": "claude-helper",
+  "version": "1.0.0",
+  "description": "Claude Code helper skills collection - 中文化等实用技能集",
+  "keywords": ["claude", "claude-code", "skill", "plugin", "chinese", "中文"],
+  "license": "MIT",
+  "author": "tianye",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bin": {
+    "claude-helper": "./scripts/cli.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js",
+    "postuninstall": "node scripts/uninstall.js"
+  },
+  "files": [
+    "plugin.json",
+    "skills/",
+    "scripts/"
+  ]
+}
