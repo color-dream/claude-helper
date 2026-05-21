@@ -1,8 +1,15 @@
 {
   "name": "@qingpingmo/claude-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claude Code helper skills collection - 中文化等实用技能集",
-  "keywords": ["claude", "claude-code", "skill", "plugin", "chinese", "中文"],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skill",
+    "plugin",
+    "chinese",
+    "中文"
+  ],
   "license": "MIT",
   "author": "tianye",
   "repository": {
