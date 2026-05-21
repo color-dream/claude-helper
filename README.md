@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">QPM Claude Helper</h1>
+  <h1 align="center">@qingpingmo/claude-helper</h1>
   <p align="center">
     <strong>Claude Code 实用技能集</strong>
     <br />
@@ -26,7 +26,7 @@
 
 ## 简介
 
-**QPM Claude Helper** 是一个 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 技能插件集合，提供中文化、技能管理等实用功能。
+**@qingpingmo/claude-helper** 是一个 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 技能插件集合，提供中文化、技能管理等实用功能。
 
 安装后，Claude Code 将自动识别并注册这些技能，让你的开发体验更加顺畅。
 
@@ -73,7 +73,7 @@ speak chinese / use chinese / switch to chinese
 ### 方式一：npm 全局安装（推荐）
 
 ```bash
-npm install -g qpm-claude-helper
+npm install -g @qingpingmo/claude-helper
 ```
 
 安装完成后自动生效，无需额外配置。
@@ -146,13 +146,13 @@ npm link
 ## 卸载
 
 ```bash
-npm uninstall -g qpm-claude-helper
+npm uninstall -g @qingpingmo/claude-helper
 ```
 
 ## 目录结构
 
 ```
-qpm-claude-helper/
+@qingpingmo/claude-helper/
 ├── skills/
 │   ├── qpm-zh-global/          # 全局中文化技能
 │   │   ├── SKILL.md
