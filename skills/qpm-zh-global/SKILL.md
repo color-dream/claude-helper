@@ -2,8 +2,9 @@
 name: qpm-zh-global
 description: >
   This skill should be used when the user asks to "qpm-zh-global", "中文模式-全局",
-  "全局中文化", "用户中文化", or wants to configure Chinese language at the
-  user level for all projects.
+  "全局中文化", "用户中文化", "用中文", "使用中文", "切换中文", "说中文",
+  "中文回复", "切换到中文", "speak chinese", "use chinese", "switch to chinese",
+  or wants to configure Chinese language at the user level for all projects.
 allowed-tools: [Read, Write, Edit, Bash, Glob]
 ---
 

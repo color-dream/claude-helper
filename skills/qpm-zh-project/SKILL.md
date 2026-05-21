@@ -2,8 +2,9 @@
 name: qpm-zh-project
 description: >
   This skill should be used when the user asks to "qpm-zh-project", "中文模式-项目",
-  "项目中文化", "项目级中文", or wants to configure Chinese language for the
-  current project only.
+  "项目中文化", "项目级中文", "用中文", "使用中文", "切换中文", "说中文",
+  "中文回复", "切换到中文", "speak chinese", "use chinese", "switch to chinese",
+  or wants to configure Chinese language for the current project only.
 allowed-tools: [Read, Write, Edit, Bash, Glob]
 ---
 
