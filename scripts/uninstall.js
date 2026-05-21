@@ -6,7 +6,7 @@ const os = require("os");
 
 const PLUGIN_NAME = "qpm-claude-helper";
 const SKILLS_DIR = path.join(os.homedir(), ".claude", "skills");
-const SKILLS = ["qpm-zh-global", "qpm-zh-project"];
+const SKILLS = ["qpm-zh-global", "qpm-zh-project", "skill-manager"];
 
 function uninstall() {
   for (const skillName of SKILLS) {
