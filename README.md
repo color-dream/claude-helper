@@ -188,6 +188,10 @@ npm link
 qpm-claude-helper status
 ```
 
+## 致谢
+
+- `/qpm-skill-manager` 参考自 [Lotus-7/manager-skill](https://github.com/Lotus-7/manager-skill)
+
 ## 贡献
 
 欢迎提交 Issue 和 Pull Request！
