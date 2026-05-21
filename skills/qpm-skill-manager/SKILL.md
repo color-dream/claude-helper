@@ -1,5 +1,5 @@
 ---
-name: skill-manager
+name: qpm-skill-manager
 description: |
   技能管家 — 盘点、检索、分析你安装的所有 Claude Code 技能，追踪使用频率，建议清理。
   触发场景：

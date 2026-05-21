@@ -58,7 +58,7 @@ speak chinese / use chinese / switch to chinese
 一站式管理你的所有 Claude Code 技能。
 
 ```
-/skill-manager
+/qpm-skill-manager
 ```
 
 | 功能 | 触发示例 | 说明 |
@@ -107,7 +107,7 @@ npm link
 
 ```bash
 # 斜杠命令
-/skill-manager
+/qpm-skill-manager
 
 # 自然语言
 盘点技能
@@ -132,7 +132,7 @@ npm link
         "hooks": [
           {
             "type": "command",
-            "command": "node ~/.claude/skills/skill-manager/track-usage.js"
+            "command": "node ~/.claude/skills/qpm-skill-manager/track-usage.js"
           }
         ]
       }
@@ -162,7 +162,7 @@ npm uninstall -g @qingpingmo/claude-helper
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── template.md
-│   └── skill-manager/          # 技能管家
+│   └── qpm-skill-manager/      # 技能管家
 │       ├── SKILL.md
 │       └── track-usage.js
 ├── scripts/
