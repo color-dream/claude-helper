@@ -1,5 +1,5 @@
 {
-  "name": "qpm-claude-helper",
+  "name": "@qingpingmo/claude-helper",
   "version": "1.0.0",
   "description": "Claude Code helper skills collection - 中文化等实用技能集",
   "keywords": ["claude", "claude-code", "skill", "plugin", "chinese", "中文"],
@@ -7,10 +7,14 @@
   "author": "tianye",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/color-dream/claude-helper.git"
+  },
+  "homepage": "https://github.com/color-dream/claude-helper#readme",
+  "bugs": {
+    "url": "https://github.com/color-dream/claude-helper/issues"
   },
   "bin": {
-    "qpm-claude-helper": "./scripts/cli.js"
+    "qpm-claude-helper": "scripts/cli.js"
   },
   "scripts": {
     "postinstall": "node scripts/install.js",
