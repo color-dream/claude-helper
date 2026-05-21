@@ -1,5 +1,5 @@
 {
-  "name": "claude-helper",
+  "name": "qpm-claude-helper",
   "version": "1.0.0",
   "description": "Claude Code helper skills collection - 中文化等实用技能集",
   "keywords": ["claude", "claude-code", "skill", "plugin", "chinese", "中文"],
@@ -10,7 +10,7 @@
     "url": ""
   },
   "bin": {
-    "claude-helper": "./scripts/cli.js"
+    "qpm-claude-helper": "./scripts/cli.js"
   },
   "scripts": {
     "postinstall": "node scripts/install.js",

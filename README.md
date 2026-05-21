@@ -1,11 +1,11 @@
-# claude-helper
+# qpm-claude-helper
 
 Claude Code 实用技能集，安装后自动注册为 Claude Code 插件。
 
 ## 安装
 
 ```bash
-npm install -g claude-helper
+npm install -g qpm-claude-helper
 ```
 
 安装完成后自动生效，无需额外配置。
@@ -40,14 +40,14 @@ npm install -g claude-helper
 ## 卸载
 
 ```bash
-npm uninstall -g claude-helper
+npm uninstall -g qpm-claude-helper
 ```
 
 ## 开发
 
 ```bash
 git clone <repo-url>
-cd claude-helper
+cd qpm-claude-helper
 npm link
 ```
 

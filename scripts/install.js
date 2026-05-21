@@ -4,9 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 
-const PLUGIN_NAME = "claude-helper";
+const PLUGIN_NAME = "qpm-claude-helper";
 const SOURCE_DIR = path.resolve(__dirname, "..");
-const TARGET_DIR = path.join(os.homedir(), ".claude", "plugins", PLUGIN_NAME);
+const SKILLS_DIR = path.join(os.homedir(), ".claude", "skills");
 
 function copyRecursive(src, dest) {
   const stat = fs.statSync(src);
@@ -38,18 +38,27 @@ function install() {
     return;
   }
 
-  // Remove old installation if exists
-  if (fs.existsSync(TARGET_DIR)) {
-    fs.rmSync(TARGET_DIR, { recursive: true, force: true });
+  // Copy each skill to ~/.claude/skills/
+  const skillsSource = path.join(SOURCE_DIR, "skills");
+  const installedSkills = [];
+
+  for (const skillName of fs.readdirSync(skillsSource)) {
+    const skillSrc = path.join(skillsSource, skillName);
+    const skillDest = path.join(SKILLS_DIR, skillName);
+
+    if (!fs.statSync(skillSrc).isDirectory()) continue;
+
+    // Remove old skill if exists
+    if (fs.existsSync(skillDest)) {
+      fs.rmSync(skillDest, { recursive: true, force: true });
+    }
+
+    copyRecursive(skillSrc, skillDest);
+    installedSkills.push(`/${skillName}`);
   }
 
-  // Copy plugin files (plugin.json + skills/)
-  fs.mkdirSync(TARGET_DIR, { recursive: true });
-  copyRecursive(path.join(SOURCE_DIR, "plugin.json"), path.join(TARGET_DIR, "plugin.json"));
-  copyRecursive(path.join(SOURCE_DIR, "skills"), path.join(TARGET_DIR, "skills"));
-
-  console.log(`[${PLUGIN_NAME}] Installed to ${TARGET_DIR}`);
-  console.log(`[${PLUGIN_NAME}] Skills available: /qpm-zh-project, /qpm-zh-global`);
+  console.log(`[${PLUGIN_NAME}] Skills installed to ${SKILLS_DIR}`);
+  console.log(`[${PLUGIN_NAME}] Skills available: ${installedSkills.join(", ")}`);
 }
 
 try {

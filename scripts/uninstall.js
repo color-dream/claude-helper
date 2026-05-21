@@ -4,16 +4,18 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 
-const PLUGIN_NAME = "claude-helper";
-const TARGET_DIR = path.join(os.homedir(), ".claude", "plugins", PLUGIN_NAME);
+const PLUGIN_NAME = "qpm-claude-helper";
+const SKILLS_DIR = path.join(os.homedir(), ".claude", "skills");
+const SKILLS = ["qpm-zh-global", "qpm-zh-project"];
 
 function uninstall() {
-  if (!fs.existsSync(TARGET_DIR)) {
-    return;
+  for (const skillName of SKILLS) {
+    const skillDir = path.join(SKILLS_DIR, skillName);
+    if (fs.existsSync(skillDir)) {
+      fs.rmSync(skillDir, { recursive: true, force: true });
+      console.log(`[${PLUGIN_NAME}] Removed ${skillDir}`);
+    }
   }
-
-  fs.rmSync(TARGET_DIR, { recursive: true, force: true });
-  console.log(`[${PLUGIN_NAME}] Removed ${TARGET_DIR}`);
 }
 
 try {
